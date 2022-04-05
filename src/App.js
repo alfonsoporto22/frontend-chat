@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div>
+      <h1>Aplicación de mensajeria</h1>
       <GetLogin/>
       <Login />
       <Messages />

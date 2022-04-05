@@ -34,9 +34,9 @@ function Login({ results }) {
 
     return (
         <>
-            <h2>Login</h2>
+            <h2>Login de usuario</h2>
             <input type="text" value={usuario} onChange={changeUsuario} /><br />
-            <input type="text" value={password} onChange={changePassword} />
+            <input type="text" value={password} onChange={changePassword} /><br />
             <button onClick={login}>Login</button>
         </>
     );

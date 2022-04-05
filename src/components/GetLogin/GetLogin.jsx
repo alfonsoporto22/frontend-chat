@@ -23,6 +23,7 @@ function GetLogin() {
 
     return (
         <>
+        <h2>Obtener todas las cuentas de usuario</h2>
             <p>{usuarios}</p>
             <button onClick={updateButtonClickHandler}>Get Users</button>
         </>
