@@ -3,6 +3,8 @@ import './App.css';
 import Login from './components/Login/Login';
 import Messages from './components/Messages/Messages';
 import GetLogin from './components/GetLogin/GetLogin';
+import SendMessages from './components/SendMessage/SendMessages';
+
 
 function App() {
   const [id, setId] = useState("");
@@ -28,6 +30,7 @@ function changePassword(event) {
       <h3>Password</h3>
       <input type="text" value={password} onChange={changePassword} /><br />
       <Messages id={id} password={password} />
+      <SendMessages id={id} password={password} />
     </div>
   );
 }
