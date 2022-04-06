@@ -9,6 +9,7 @@ import SendMessages from './components/SendMessage/SendMessages';
 function App() {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
+  const [ loggedIn, setloggedIn ] = useState(false);
 
   function changeId(event) {
     setId(event.target.value);
@@ -16,6 +17,10 @@ function App() {
 
 function changePassword(event) {
     setPassword(event.target.value);
+}
+
+function loginHandler() {
+  setloggedIn(true);
 }
 
 
@@ -29,8 +34,9 @@ function changePassword(event) {
       <input type="text" value={id} onChange={changeId} /><br />
       <h3>Password</h3>
       <input type="text" value={password} onChange={changePassword} /><br />
-      <Messages id={id} password={password} />
-      <SendMessages id={id} password={password} />
+      <button onClick={loginHandler}>Register</button>
+      {loggedIn && <Messages id={id} password={password} />}
+      {loggedIn && <SendMessages id={id} password={password} />}
     </div>
   );
 }
