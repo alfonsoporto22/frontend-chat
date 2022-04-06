@@ -4,20 +4,12 @@ import Login from './components/Login/Login';
 import Messages from './components/Messages/Messages';
 import GetLogin from './components/GetLogin/GetLogin';
 import SendMessages from './components/SendMessage/SendMessages';
-
+import Register from './components/Register/Register';
 
 function App() {
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
   const [ loggedIn, setloggedIn ] = useState(false);
+  const [ datosPadre, setDatosPadre ] = useState("");
 
-  function changeId(event) {
-    setId(event.target.value);
-}
-
-function changePassword(event) {
-    setPassword(event.target.value);
-}
 
 function loginHandler() {
   setloggedIn(true);
@@ -29,14 +21,10 @@ function loginHandler() {
       <h1>Aplicación de mensajeria</h1>
       <GetLogin />
       <Login />
-     
-      <h3>Id</h3>
-      <input type="text" value={id} onChange={changeId} /><br />
-      <h3>Password</h3>
-      <input type="text" value={password} onChange={changePassword} /><br />
+      <Register parentSetter={setDatosPadre}/><br />
       <button onClick={loginHandler}>Register</button>
-      {loggedIn && <Messages id={id} password={password} />}
-      {loggedIn && <SendMessages id={id} password={password} />}
+      {loggedIn && <Messages id={datosPadre.id} password={datosPadre.password} />}
+      {loggedIn && <SendMessages id={datosPadre.id} password={datosPadre.password} />}
     </div>
   );
 }
