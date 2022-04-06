@@ -50,7 +50,10 @@ function Messages({ id, password }) {
     }
     function getMessages(token) {
         authGet(host + "/messages/", token).then(
-            data => setMessages(JSON.stringify(data))
+            data => setMessages(data.map(
+                (item) => <li ><b>Id:</b> {item.source}- <b>Contenido:</b> {item.content}</li>
+                
+            ))
         )
     }
 
