@@ -32,10 +32,6 @@ function Messages({ id, password }) {
         [id, password]
     )
 
-    /*function createToken() {
-        setToken(authToken(id, password));
-    }*/
-
     async function authGet(url, token) {
         const response = await fetch(
             url,
