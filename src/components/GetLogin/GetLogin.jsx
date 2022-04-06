@@ -2,7 +2,8 @@ import { useEffect, useState, useRef } from 'react';
 
 function GetLogin() {
 
-    let [usuarios, setusuarios] = useState("");
+    let [usuarios, setUsuarios] = useState("");
+    let [usuarios2, setUsuarios2] = useState("");
     const host = "https://web-develop-react-express-chat.herokuapp.com"
 
     //Funciones para coger usuarios GET
@@ -12,20 +13,21 @@ function GetLogin() {
         return data;
     }
 
-    async function getUsers() {
-        const users = await get(host + "/users/");
-        setusuarios(JSON.stringify(users));
-    };
 
-    function updateButtonClickHandler() {
-        getUsers();
+    async function dataToHTMLList() {
+        const users = await get(host + "/users/");
+        setUsuarios(users.map(
+            (item) => <li ><b>Id:</b> {item.id}- <b>Nombre:</b> {item.name}</li>
+            
+        ));
+
     }
 
     return (
         <>
-        <h2>Obtener todas las cuentas de usuario</h2>
-            <p>{usuarios}</p>
-            <button onClick={updateButtonClickHandler}>Get Users</button>
+            <h2>Obtener todas las cuentas de usuario</h2>
+            <button onClick={dataToHTMLList}>Listar usuarios</button>
+            <ul>{usuarios}</ul>
         </>
     );
 
