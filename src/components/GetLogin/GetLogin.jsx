@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
-
+import './GetLogin.css';
 function GetLogin() {
 
     let [usuarios, setUsuarios] = useState("");
-    let [usuarios2, setUsuarios2] = useState("");
+    let [visibilidad, setVisibilidad] = useState(true);
     const host = "https://web-develop-react-express-chat.herokuapp.com"
 
     //Funciones para coger usuarios GET
@@ -15,11 +15,17 @@ function GetLogin() {
 
 
     async function dataToHTMLList() {
-        const users = await get(host + "/users/");
-        setUsuarios(users.map(
-            (item) => <li ><b>Id:</b> {item.id}- <b>Nombre:</b> {item.name}</li>
-            
-        ));
+        if (visibilidad) {
+            const users = await get(host + "/users/");
+            setUsuarios(users.map(
+                (item) => <li ><b>Id:</b> {item.id}- <b>Nombre:</b> {item.name}</li>
+
+            ));
+            setVisibilidad(false);
+        } else {
+            setUsuarios("")
+            setVisibilidad(true);
+        }
 
     }
 

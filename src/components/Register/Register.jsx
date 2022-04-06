@@ -27,12 +27,10 @@ function Register({ parentSetter }) {
         <>
             <h2>Registro</h2>
             <input
-                placeholder="id"
                 value={id}
                 onChange={changeIdHandler}
-            />
+            /><br/>
             <input
-                placeholder="contraseña"
                 type="password" value={password}
                 onChange={changePasswordHandler}
             />
