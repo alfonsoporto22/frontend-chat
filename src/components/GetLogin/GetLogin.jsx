@@ -18,7 +18,7 @@ function GetLogin() {
         if (visibilidad) {
             const users = await get(host + "/users/");
             setUsuarios(users.map(
-                (item) => <li ><b>Id:</b> {item.id}- <b>Nombre:</b> {item.name}</li>
+                (item) => <li ><b>Id:</b> {item.id} - <b>Nombre:</b> {item.name}</li>
 
             ));
             setVisibilidad(false);
@@ -30,11 +30,11 @@ function GetLogin() {
     }
 
     return (
-        <>
+        <div className='login'>
             <h2>Obtener todas las cuentas de usuario</h2>
             <button onClick={dataToHTMLList}>Listar usuarios</button>
             <ul>{usuarios}</ul>
-        </>
+        </div>
     );
 
 }
