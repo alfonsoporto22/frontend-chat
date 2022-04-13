@@ -1,0 +1,11 @@
+
+.login{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    margin:2%;
+}
+button{
+    align-self: end;
+}

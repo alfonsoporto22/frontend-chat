@@ -1,9 +1,12 @@
 import GetLogin from "../components/GetLogin/GetLogin"
 import Login from "../components/Login/Login"
+import './viewLogin.css';
 
-function viewLogin () {
-    return(
-        <Login/>
+function viewLogin() {
+    return (
+        <div className="login">
+            <Login />
+        </div>
     )
 }
 
