@@ -1,0 +1,30 @@
+
+.mensajes{
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+li{
+    border: 1px solid black;
+    margin: 1%;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.myMessage{
+    width:80%;
+    background-color: rgb(16, 245, 245);
+    align-self: end;
+    margin-left: 20%;
+}
+
+.otherMessage{
+    width:80%;
+    background-color: yellow;
+    align-items: center;
+    
+}

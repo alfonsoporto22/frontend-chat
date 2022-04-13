@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import '../../views/viewMessages.css'
 
 function Messages({ id, password }) {
 
@@ -18,15 +19,16 @@ function Messages({ id, password }) {
     }
 
     /*
-    useEffect que solo se ejecutará una vez porque metemos un array vacio
+    useEffect
     */
     useEffect(
         () => {
             /**useInterval:primer parametro será una función que queramos que se ejecute 
-             * en el tiempo que queramos
+             * en el tiempo que queramos. En este caso cada segundo llama a la 
+             * función getMessages para mostrar mensajes
              */
-            if ( timer ) clearInterval(timer);
-            const timerId = setInterval(()=>getMessages(token), 1000)
+            if (timer) clearInterval(timer);
+            const timerId = setInterval(() => getMessages(token), 1000)
             setTimer(timerId)
         },
         [id, password]
@@ -47,17 +49,19 @@ function Messages({ id, password }) {
     function getMessages(token) {
         authGet(host + "/messages/", token).then(
             data => setMessages(data.map(
-                (item) => <li ><b>Id:</b> {item.source}- <b>Contenido:</b> {item.content}</li>
-                
+                (item) =>
+                    <div className={item.source===parseInt(id)?"myMessage":"otherMessage"}>
+                        <li ><b>Id:</b> {item.source} <b>=</b> {item.content}</li>
+                    </div>
+
             ))
         )
     }
 
     return (
         <>
-            <h2>Obtener todos los mensajes</h2>
+            <h2>Mostrar token</h2>
             <p>{token}</p>
-            <button onClick={getMessages}>Obtener Mensajes</button>
             <p>{messages}</p>
         </>
     );
