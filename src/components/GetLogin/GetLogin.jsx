@@ -32,7 +32,9 @@ function GetLogin() {
     return (
         <div className='login'>
             <h2>Obtener todas las cuentas de usuario</h2>
+            <br/>
             <button onClick={dataToHTMLList}>Listar usuarios</button>
+            <br/>
             <ul>{usuarios}</ul>
         </div>
     );
