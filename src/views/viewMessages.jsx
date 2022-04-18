@@ -1,6 +1,6 @@
 import Messages from "../components/Messages/Messages";
 import SendMessages from "../components/SendMessage/SendMessages";
-import './viewMessages.css';
+import './style/viewMessages.css';
 
 function viewMessages(datosPadre, loggedIn) {
     return (

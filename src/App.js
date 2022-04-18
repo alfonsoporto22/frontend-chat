@@ -1,10 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import Login from './components/Login/Login';
-import Messages from './components/Messages/Messages';
-import GetLogin from './components/GetLogin/GetLogin';
-import SendMessages from './components/SendMessage/SendMessages';
-import Register from './components/Register/Register';
 import viewListUsers from './views/viewListUsers';
 import viewLogin from './views/viewLogin';
 import viewMessages from './views/viewMessages';

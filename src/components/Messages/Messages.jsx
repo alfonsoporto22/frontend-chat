@@ -60,7 +60,7 @@ function Messages({ id, password }) {
 
     return (
         <>
-            <h2>Mostrar token</h2>
+            <h2>Token</h2>
             <p>{token}</p>
             <p>{messages}</p>
         </>

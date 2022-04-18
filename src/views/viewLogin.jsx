@@ -1,6 +1,6 @@
 import GetLogin from "../components/GetLogin/GetLogin"
 import Login from "../components/Login/Login"
-import './viewLogin.css';
+import './style/viewLogin.css';
 
 function viewLogin() {
     return (
