@@ -5,7 +5,7 @@ function Login({ results }) {
     const [usuario, setUsuario] = useState("");
     const [password, setPassword] = useState("");
     const host = "https://web-develop-react-express-chat.herokuapp.com"
-    
+
     async function newUser(url, data) {
         const responses = await fetch(
             url + "/login/",
@@ -24,10 +24,11 @@ function Login({ results }) {
         const data = JSON.stringify(dataTaken);
         newUser(host, data);
     }
+
+    //Handlers
     function changeUsuario(event) {
         setUsuario(event.target.value);
     }
-
     function changePassword(event) {
         setPassword(event.target.value);
     }

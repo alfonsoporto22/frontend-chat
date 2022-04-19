@@ -19,7 +19,7 @@ function App() {
     <div>
       <header>
         <h1>Aplicación de mensajeria</h1>
-        <div class="botones">
+        <div className="botones">
           <button onClick={() => { setCurrentView(viewListUsers) }}>Mostrar Usuarios</button>
           <button onClick={() => { setCurrentView(viewLogin) }}>Mostrar Login</button>
           <button onClick={() => { setCurrentView(viewRegister(setDatosPadre, loginHandler)) }}>Mostrar Registro</button>

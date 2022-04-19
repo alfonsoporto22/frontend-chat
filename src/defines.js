@@ -1,0 +1,1 @@
+export const REFRESH_TIME=3000;//Tiempo en cargar

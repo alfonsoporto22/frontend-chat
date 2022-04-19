@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import '../../views/style/viewMessages.css'
+import { REFRESH_TIME } from '../../defines';
 
 function Messages({ id, password }) {
 
@@ -28,7 +29,7 @@ function Messages({ id, password }) {
              * función getMessages para mostrar mensajes
              */
             if (timer) clearInterval(timer);
-            const timerId = setInterval(() => getMessages(token), 1000)
+            const timerId = setInterval(() => getMessages(token), REFRESH_TIME)
             setTimer(timerId)
         },
         [id, password]
@@ -50,10 +51,9 @@ function Messages({ id, password }) {
         authGet(host + "/messages/", token).then(
             data => setMessages(data.map(
                 (item) =>
-                    <div className={item.source===parseInt(id)?"myMessage":"otherMessage"}>
+                    <div className={item.source === parseInt(id) ? "myMessage" : "otherMessage"}>
                         <li ><b>Id:</b> {item.source} <b>=</b> {item.content}</li>
                     </div>
-
             ))
         )
     }
