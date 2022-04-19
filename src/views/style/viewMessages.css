@@ -10,21 +10,23 @@
 }
 li{
     border: 1px solid black;
-    margin: 1%;
+    margin-top: 1%;
     border-radius: 5px;
     width: 100%;
 }
 
 .myMessage{
     width:80%;
-    background-color: rgb(16, 245, 245);
-    align-self: end;
     margin-left: 20%;
+    border-radius: 5px;
+    background-color: yellow;
+    padding-right: 2px;
 }
 
 .otherMessage{
+    border-radius: 5px;
     width:80%;
-    background-color: yellow;
     align-items: center;
-    
+    background-color: rgb(16, 245, 245);
+    padding-right: 2px;
 }

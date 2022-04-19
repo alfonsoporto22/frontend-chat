@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import '../../views/viewMessages.css'
+import '../../views/style/viewMessages.css'
 
 function Messages({ id, password }) {
 
