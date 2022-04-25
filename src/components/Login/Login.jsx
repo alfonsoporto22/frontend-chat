@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
+import { HOST } from "../../aux_api";
 
-function Login({ results }) {
+function Login() {
 
     const [usuario, setUsuario] = useState("");
     const [password, setPassword] = useState("");
-    const host = "https://web-develop-react-express-chat.herokuapp.com"
 
     async function newUser(url, data) {
         const responses = await fetch(
@@ -22,7 +22,7 @@ function Login({ results }) {
     function login() {
         let dataTaken = { userName: usuario, password: password };
         const data = JSON.stringify(dataTaken);
-        newUser(host, data);
+        newUser(HOST, data);
     }
 
     //Handlers

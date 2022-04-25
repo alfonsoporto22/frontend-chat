@@ -1,22 +1,14 @@
 import { useEffect, useState, useRef } from 'react';
 import './GetLogin.css';
+import { HOST, get } from "../../aux_api";
 function GetLogin() {
 
     let [usuarios, setUsuarios] = useState("");
     let [visibilidad, setVisibilidad] = useState(true);
-    const host = "https://web-develop-react-express-chat.herokuapp.com"
-
-    //Funciones para coger usuarios GET
-    async function get(url) {
-        const response = await fetch(url);
-        const data = await response.json();
-        return data;
-    }
-
 
     async function dataToHTMLList() {
         if (visibilidad) {
-            const users = await get(host + "/users/");
+            const users = await get(HOST + "/users/");
             setUsuarios(users.map(
                 (item) => <li ><b>Id:</b> {item.id} - <b>Nombre:</b> {item.name}</li>
 
