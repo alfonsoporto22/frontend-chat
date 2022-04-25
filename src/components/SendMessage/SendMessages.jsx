@@ -1,5 +1,5 @@
-import {  useState } from 'react';
-import {HOST,authPost,authToken} from "../../aux_api";
+import { useState } from 'react';
+import { HOST, authPost, authToken } from "../../aux_api";
 
 function SendMessages({ id, password }) {
 

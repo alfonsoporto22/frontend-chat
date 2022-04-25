@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import '../../views/style/viewMessages.css'
 import { REFRESH_TIME } from '../../defines';
-import {HOST,authToken,authGet} from "../../aux_api";
+import { HOST, authToken, authGet } from "../../aux_api";
 
 function Messages({ id, password }) {
 
@@ -26,7 +26,7 @@ function Messages({ id, password }) {
         [id, password]
     )
 
-    let contador=0
+    let contador = 0
     function getMessages(token) {
         authGet(HOST + "/messages/", token).then(
             data => setMessages(data.map(

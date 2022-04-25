@@ -2,7 +2,7 @@
 export const HOST = "https://web-develop-react-express-chat.herokuapp.com"
 
 //Funcion para coger usuarios GET
-export  async function get(url) {
+export async function get(url) {
     const response = await fetch(url);
     const data = await response.json();
     return data;

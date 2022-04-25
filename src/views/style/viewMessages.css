@@ -1,5 +1,4 @@
-
-.mensajes{
+.mensajes {
     display: flex;
     width: 100%;
     align-items: stretch;
@@ -9,24 +8,24 @@
     background-color: var(--colorBackground);
 }
 
-li{
+li {
     border: 1px solid black;
     margin-top: 1%;
     border-radius: 5px;
     width: 100%;
 }
 
-.myMessage{
-    width:80%;
+.myMessage {
+    width: 80%;
     margin-left: 20%;
     border-radius: 5px;
     background-color: var(--colorMyMessages);
     padding-right: 2px;
 }
 
-.otherMessage{
+.otherMessage {
     border-radius: 5px;
-    width:80%;
+    width: 80%;
     align-items: center;
     background-color: var(--colorOtherMessages);
     padding-right: 2px;

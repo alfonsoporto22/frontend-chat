@@ -1,1 +1,1 @@
-export const REFRESH_TIME=500;//Tiempo en cargar
+export const REFRESH_TIME = 500;//Tiempo en cargar

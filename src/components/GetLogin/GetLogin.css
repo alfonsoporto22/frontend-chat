@@ -1,8 +1,9 @@
-ul,li{
+ul,
+li {
   list-style: none;
 }
 
-.login{
+.login {
   display: flex;
   height: 300px;
   justify-content: center;

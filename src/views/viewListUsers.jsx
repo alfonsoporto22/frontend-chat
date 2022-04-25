@@ -1,8 +1,8 @@
 import GetLogin from "../components/GetLogin/GetLogin"
 
-function viewLogin () {
-    return(
-        <GetLogin/>
+function viewLogin() {
+    return (
+        <GetLogin />
     )
 }
 
