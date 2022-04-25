@@ -5,12 +5,12 @@ function GetLogin() {
 
     let [usuarios, setUsuarios] = useState("");
     let [visibilidad, setVisibilidad] = useState(true);
-
+    let contador=0;
     async function dataToHTMLList() {
         if (visibilidad) {
             const users = await get(HOST + "/users/");
             setUsuarios(users.map(
-                (item) => <li ><b>Id:</b> {item.id} - <b>Nombre:</b> {item.name}</li>
+                (item,key) => <li key={contador++}><b>Id:</b> {item.id} - <b>Nombre:</b> {item.name}</li>
 
             ));
             setVisibilidad(false);

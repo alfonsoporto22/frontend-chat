@@ -26,12 +26,12 @@ function Messages({ id, password }) {
         [id, password]
     )
 
-    
+    let contador=0
     function getMessages(token) {
         authGet(HOST + "/messages/", token).then(
             data => setMessages(data.map(
                 (item) =>
-                    <div className={item.source === parseInt(id) ? "myMessage" : "otherMessage"}>
+                    <div key={contador++} className={item.source === parseInt(id) ? "myMessage" : "otherMessage"}>
                         <li ><b>Id:</b> {item.source} <b>=</b> {item.content}</li>
                     </div>
             ))
@@ -42,7 +42,7 @@ function Messages({ id, password }) {
         <>
             <h2>Token</h2>
             <p>{token}</p>
-            <p>{messages}</p>
+            <div>{messages}</div>
         </>
     );
 
