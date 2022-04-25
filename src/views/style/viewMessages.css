@@ -6,8 +6,9 @@
     justify-content: space-evenly;
     align-content: center;
     flex-direction: column;
-    flex-wrap: nowrap;
+    background-color: var(--colorBackground);
 }
+
 li{
     border: 1px solid black;
     margin-top: 1%;
@@ -19,7 +20,7 @@ li{
     width:80%;
     margin-left: 20%;
     border-radius: 5px;
-    background-color: yellow;
+    background-color: var(--colorMyMessages);
     padding-right: 2px;
 }
 
@@ -27,6 +28,6 @@ li{
     border-radius: 5px;
     width:80%;
     align-items: center;
-    background-color: rgb(16, 245, 245);
+    background-color: var(--colorOtherMessages);
     padding-right: 2px;
 }

@@ -1,3 +1,9 @@
+:root {
+  --colorMyMessages: yellow;
+  --colorOtherMessages: cyan;
+  --colorBackground:rgb(223, 213, 213);
+}
+
 ul,li{
   text-decoration: none;
 }
