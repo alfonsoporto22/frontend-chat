@@ -18,12 +18,12 @@ function App() {
   return (
     <div>
       <header>
-        <h1>Aplicación de mensajeria</h1>
+        <h1>Aplicación de mensajería</h1>
         <div className="botones">
           <button onClick={() => { setCurrentView(viewListUsers) }}>Mostrar Usuarios</button>
-          <button onClick={() => { setCurrentView(viewLogin) }}>Mostrar Login</button>
-          <button onClick={() => { setCurrentView(viewRegister(setDatosPadre, loginHandler)) }}>Mostrar Registro</button>
-          <button onClick={() => { setCurrentView(viewMessages(datosPadre, loggedIn)) }}>Mostrar Mensajes</button>
+          <button onClick={() => { setCurrentView(viewLogin) }}>Login</button>
+          <button onClick={() => { setCurrentView(viewRegister(setDatosPadre, loginHandler)) }}>Registro</button>
+          <button onClick={() => { setCurrentView(viewMessages(datosPadre, loggedIn)) }}>Mensajes</button>
         </div>
       </header>
       <div className='vistas'>

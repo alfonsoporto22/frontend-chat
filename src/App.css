@@ -2,6 +2,7 @@
   --colorMyMessages: yellow;
   --colorOtherMessages: cyan;
   --colorBackground:rgb(223, 213, 213);
+  --generalMargin:5px;
 }
 
 ul,li{
@@ -24,6 +25,10 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+ }
+ 
+.botones>button{
+  margin: var(--generalMargin);
 }
 .vistas{
   display: flex;
